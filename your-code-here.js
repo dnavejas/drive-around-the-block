@@ -41,10 +41,11 @@ function drive(element, increment){
         element.setAttribute("class", "r270");
         moveUp(element, increment);
     }
-    else if(props.left >= 350 && props.top >= 100 && props.top <= 300){
+    else if(props.left >= 110 && props.top >= 100 && props.top <= 135){
         element.setAttribute("class", "");
         moveRight(element, increment);
     }
+    // else if()
     
     
 }

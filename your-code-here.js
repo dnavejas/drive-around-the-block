@@ -24,11 +24,20 @@ function moveUp(element,increment){
     // console.dir(props); //check the console for what props has in it!
     element.style.top = (props.top - increment) + 'px'; //move element
 }
+function getPastFinishLine(element,increment){
+    let props = getProps(element); //get the positional information you need to move an element
+    // console.dir(props); //check the console for what props has in it!
+    element.style.left = (props.left + increment) + 'px'; //move element
+}
 function drive(element, increment){
     let props = getProps(element);
     console.log(props);
     console.log(element);
     console.log(increment);
+
+    if(props.left >= 600 && props.top >= 100 && props.top <= 135){
+        moveRight(element, increment);
+    }
     if (props.left >= 810 && props.top >= 100 && props.top <= 310){    
         element.setAttribute("class", "r90");
         moveDown(element, increment);
@@ -41,11 +50,11 @@ function drive(element, increment){
         element.setAttribute("class", "r270");
         moveUp(element, increment);
     }
-    else if(props.left >= 110 && props.top >= 100 && props.top <= 135){
-        element.setAttribute("class", "");
-        moveRight(element, increment);
+    else if(props.left >= 250 && props.top <= 120 && props.left <= 265){
+        clearInterval;
     }
-    // else if()
-    
-    
+    else if(props.left >= 100 && props.top <= 120 && props.left <= 260){
+        element.setAttribute("class", "");
+        getPastFinishLine(element, increment);
+    }
 }

@@ -64,7 +64,7 @@ function start() {
         var gameBoard = document.querySelector("#game-board");
         gameBoard.addEventListener('redraw', redraw, false);
         timerId = setInterval(function() {gameBoard.dispatchEvent(event);}, 50);
-        console.log(setInterval);
+        // console.log(setInterval);
     }
 }
 

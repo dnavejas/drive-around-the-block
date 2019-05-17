@@ -26,6 +26,7 @@ function moveUp(element,increment){
 function getPastFinishLine(element,increment){
     let props = getProps(element); //get the positional information you need to move an element
     element.style.left = (props.left + increment) + 'px'; //move element
+    element.setAttribute("class", "r360");
 }
 function checkDistance(element, increment){
     let props = getProps(element);
@@ -88,7 +89,7 @@ function drive(element, increment){
         moveUp(element, increment);
     }
     else if(props.left >= 100 && props.top <= 120 && props.left <= 260){
-        element.setAttribute("class", "");
+        element.setAttribute("class", "r360");
         getPastFinishLine(element, increment);
     }
 }
